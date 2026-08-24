@@ -1,0 +1,6 @@
+{
+  "name": "ZenithMC - Java & Bedrock Minecraft Server",
+  "description": "Official website for ZenithMC Minecraft Server featuring live server status, Bedrock & Java connection info, Lifesteal SMP Dev Blog, and Discord community integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "blogPosts": {
+      "title": "Blog Post",
+      "description": "ZenithMC server announcements and updates",
+      "properties": {
+        "title": { "type": "string", "description": "Title of the post" },
+        "category": { "type": "string", "description": "Category name" },
+        "author": { "type": "string", "description": "Author display name" },
+        "authorEmail": { "type": "string", "description": "Author email address" },
+        "date": { "type": "string", "description": "Formatted date" },
+        "summary": { "type": "string", "description": "Short preview teaser" },
+        "content": { "type": "string", "description": "Full post markdown/text" },
+        "tags": { "type": "array", "description": "Tags list" },
+        "createdAt": { "type": "number", "description": "Timestamp in ms" }
+      },
+      "required": ["title", "content"]
+    },
+    "staffMembers": {
+      "title": "Staff Member",
+      "description": "ZenithMC staff members and roles",
+      "properties": {
+        "name": { "type": "string", "description": "Minecraft IGN" },
+        "role": { "type": "string", "description": "Staff role title" },
+        "bio": { "type": "string", "description": "Staff biography" },
+        "avatarUrl": { "type": "string", "description": "Avatar head image URL" },
+        "badgeColor": { "type": "string", "description": "Badge CSS classes" },
+        "order": { "type": "number", "description": "Display order index" },
+        "updatedAt": { "type": "number", "description": "Last updated timestamp" }
+      },
+      "required": ["name", "role"]
+    }
+  },
+  "firestore": {
+    "/blogPosts/{postId}": {
+      "schema": "blogPosts",
+      "description": "Collection of server blog posts"
+    },
+    "/staffMembers/{staffId}": {
+      "schema": "staffMembers",
+      "description": "Collection of server staff members"
+    }
+  }
+}
